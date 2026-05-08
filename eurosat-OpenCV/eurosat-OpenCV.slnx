@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="eurosat-OpenCV.vcxproj" Id="a352ea03-2cac-4262-9c2e-16aa5522f8c0" />
+</Solution>

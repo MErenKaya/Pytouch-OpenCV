@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+*.user
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# dataset (opsiyonel)
+dataset/
