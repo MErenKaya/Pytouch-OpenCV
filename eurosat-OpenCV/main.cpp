@@ -18,19 +18,19 @@ int main()
         "River"
     };
 
-    Net net = readNetFromONNX("model.onnx"); 
+    Net net = readNetFromONNX("..."); ///Input Model Path
 
     if (net.empty())
     {
-        cout << "Model yuklenemedi!" << endl;
+        cout << "Model could not be loaded!" << endl;
         return -1;
     }
 
-    Mat image = imread("..."); //Input Image Path
+    Mat image = imread("...jpg"); //Input Image Path
 
     if (image.empty())
     {
-        cout << "Resim yuklenemedi!" << endl;
+        cout << "Image could not be loaded!" << endl;
         return -1;
     }
 
@@ -60,7 +60,6 @@ int main()
     minMaxLoc(output.reshape(1, 1), 0, &confidence, 0, &classIdPoint);
     int classId = classIdPoint.x;
 
-    // Konsola da yazdıralım
     cout << "Tahmin: " << classes[classId] << " (" << confidence << ")" << endl;
 
     Mat displayImage;
@@ -102,7 +101,7 @@ int main()
 
     putText(displayImage,labelText,textOrg,FONT_HERSHEY_SIMPLEX,fontScale,Scalar(0, 255, 0),thickness,LINE_AA);
 
-    string windowName = "Derin Ogrenme Tahmin";
+    string windowName = "Land Classification";
     namedWindow(windowName, WINDOW_AUTOSIZE);
     imshow(windowName, displayImage);
 
